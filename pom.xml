@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--基础信息-->
+    <groupId>com.github.datachina</groupId>
+    <artifactId>common</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
+
+    <!--项目介绍-->
+    <name>common</name>
+    <description>公共服务</description>
+
+    <!--配置-->
+    <properties>
+        <!--当前common的版本-->
+        <common.version>1.0.0</common.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+        <!--jetbrains annotations 版本-->
+        <jetbrains.annotations.version>22.0.0</jetbrains.annotations.version>
+        <!--maven javadoc版本-->
+        <maven.javadoc.version>3.3.2</maven.javadoc.version>
+        <!--maven source版本-->
+        <maven.source.version>3.2.1</maven.source.version>
+    </properties>
+
+    <!--构建-->
+    <build>
+        <plugins>
+            <!--javadoc-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>${maven.javadoc.version}</version>
+                <configuration>
+                    <!--指定编码为UTF-8-->
+                    <encoding>UTF-8</encoding>
+                    <charset>UTF-8</charset>
+                    <docencoding>UTF-8</docencoding>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--source-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>${maven.source.version}</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
