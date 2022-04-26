@@ -8,6 +8,9 @@
     <groupId>com.github.datachina</groupId>
     <artifactId>common</artifactId>
     <version>1.0.0</version>
+    <modules>
+        <module>common-lang</module>
+    </modules>
     <packaging>pom</packaging>
 
     <!--项目介绍-->
