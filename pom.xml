@@ -16,19 +16,55 @@
 
     <!--配置-->
     <properties>
-        <!--当前common的版本-->
+        <!--当前 common 的版本-->
         <common.version>1.0.0</common.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
         <!--jetbrains annotations 版本-->
-        <jetbrains.annotations.version>22.0.0</jetbrains.annotations.version>
-        <!--maven javadoc版本-->
+        <jetbrains.annotations.version>23.0.0</jetbrains.annotations.version>
+        <!--maven javadoc 版本-->
         <maven.javadoc.version>3.3.2</maven.javadoc.version>
-        <!--maven source版本-->
+        <!--maven source 版本-->
         <maven.source.version>3.2.1</maven.source.version>
+        <!--boot 版本-->
+        <spring.boot.version>2.6.6</spring.boot.version>
     </properties>
+
+    <!--依赖管理-->
+    <dependencyManagement>
+        <dependencies>
+            <!--jetbrains注解-->
+            <dependency>
+                <groupId>org.jetbrains</groupId>
+                <artifactId>annotations</artifactId>
+                <version>${jetbrains.annotations.version}</version>
+            </dependency>
+            <!--springboot依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring.boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <!--依赖-->
+    <dependencies>
+        <!--jetbrains注解-->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
 
     <!--构建-->
     <build>
