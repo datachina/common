@@ -2,21 +2,21 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-
     <!--基础信息-->
-    <groupId>com.github.datachina</groupId>
+    <groupId>com.data</groupId>
     <artifactId>common</artifactId>
     <version>1.0.0</version>
+    <modelVersion>4.0.0</modelVersion>
+    <name>common</name>
+    <description>公共服务</description>
+    <packaging>pom</packaging>
+
+    <!--子模块-->
     <modules>
         <module>common-lang</module>
         <module>common-web</module>
+        <module>common-web-starter</module>
     </modules>
-    <packaging>pom</packaging>
-
-    <!--项目介绍-->
-    <name>common</name>
-    <description>公共服务</description>
 
     <!--配置-->
     <properties>
@@ -55,13 +55,13 @@
             </dependency>
             <!--common-lang-->
             <dependency>
-                <groupId>com.github.datachina</groupId>
+                <groupId>com.data</groupId>
                 <artifactId>common-lang</artifactId>
                 <version>${common.version}</version>
             </dependency>
             <!--common-web-->
             <dependency>
-                <groupId>com.github.datachina</groupId>
+                <groupId>com.data</groupId>
                 <artifactId>common-web</artifactId>
                 <version>${common.version}</version>
             </dependency>

@@ -11,6 +11,19 @@
 
     <!--基础信息-->
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>common-lang</artifactId>
+    <artifactId>common-web-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
+
+    <dependencies>
+        <!--common-lang-->
+        <dependency>
+            <groupId>com.data</groupId>
+            <artifactId>common-lang</artifactId>
+        </dependency>
+        <!--common-web-->
+        <dependency>
+            <groupId>com.data</groupId>
+            <artifactId>common-web</artifactId>
+        </dependency>
+    </dependencies>
 </project>
