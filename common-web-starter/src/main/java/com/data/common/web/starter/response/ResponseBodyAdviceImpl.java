@@ -34,8 +34,8 @@ public class ResponseBodyAdviceImpl implements ResponseBodyAdvice<Object> {
         // 类是否包含指定注解
         ResponsePack classAnnotation = returnType.getDeclaringClass().getAnnotation(ResponsePack.class);
         // 方法注解不为空切需要包装
-        if (methodAnnotation != null && methodAnnotation.pack()) {
-            return true;
+        if (methodAnnotation != null) {
+            return methodAnnotation.pack();
         }
         // 否则判断类注解是否不为空切需要包装
         return classAnnotation != null && classAnnotation.pack();
