@@ -1,6 +1,5 @@
 package com.data.common.lang.exception;
 
-import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,7 +12,6 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
 @SuppressWarnings("unused")
 public class BaseException extends RuntimeException {
 
