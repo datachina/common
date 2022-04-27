@@ -15,15 +15,28 @@
     <packaging>jar</packaging>
 
     <dependencies>
-        <!--common-lang-->
-        <dependency>
-            <groupId>com.data</groupId>
-            <artifactId>common-lang</artifactId>
-        </dependency>
         <!--common-web-->
         <dependency>
             <groupId>com.data</groupId>
             <artifactId>common-web</artifactId>
+        </dependency>
+        <!--参数校验-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--configuration process-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--autoconfigure-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <optional>true</optional>
         </dependency>
     </dependencies>
 </project>
