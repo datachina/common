@@ -1,4 +1,4 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 

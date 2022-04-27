@@ -1,20 +1,20 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * 修改失败异常
+ * 新增失败异常
  *
  * @author jidaojiuyou
  */
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class UpdateFailedException extends BaseException {
+public class AddFailedException extends BaseException {
 
     /**
      * @param message 异常消息
      */
-    public UpdateFailedException(String message) {
+    public AddFailedException(String message) {
         super(message);
     }
 }

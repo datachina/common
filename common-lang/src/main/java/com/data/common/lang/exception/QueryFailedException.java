@@ -1,20 +1,20 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * 参数为空异常
+ * 查询失败异常
  *
  * @author jidaojiuyou
  */
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class ParamEmptyException extends BaseException {
+public class QueryFailedException extends BaseException {
 
     /**
      * @param message 异常消息
      */
-    public ParamEmptyException(String message) {
+    public QueryFailedException(String message) {
         super(message);
     }
 }

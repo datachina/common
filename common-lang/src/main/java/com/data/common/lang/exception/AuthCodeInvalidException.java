@@ -1,20 +1,20 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * 删除失败异常
+ * 认证码失效异常
  *
  * @author jidaojiuyou
  */
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class DeleteFailedException extends BaseException {
+public class AuthCodeInvalidException extends BaseException {
 
     /**
      * @param message 异常消息
      */
-    public DeleteFailedException(String message) {
+    public AuthCodeInvalidException(String message) {
         super(message);
     }
 }

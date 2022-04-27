@@ -1,20 +1,20 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * 文件上传失败异常
+ * 未登录异常
  *
  * @author jidaojiuyou
  */
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class FileUploadFailException extends BaseException {
+public class NotLoginException extends BaseException {
 
     /**
      * @param message 异常消息
      */
-    public FileUploadFailException(String message) {
+    public NotLoginException(String message) {
         super(message);
     }
 }

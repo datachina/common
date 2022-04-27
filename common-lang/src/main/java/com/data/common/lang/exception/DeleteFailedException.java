@@ -1,20 +1,20 @@
-package lang.exception;
+package com.data.common.lang.exception;
 
 import lombok.NoArgsConstructor;
 
 /**
- * 账号已存在异常，一般用于注册
+ * 删除失败异常
  *
  * @author jidaojiuyou
  */
 @NoArgsConstructor
 @SuppressWarnings("unused")
-public class AccountAlreadyExistsException extends BaseException {
+public class DeleteFailedException extends BaseException {
 
     /**
      * @param message 异常消息
      */
-    public AccountAlreadyExistsException(String message) {
+    public DeleteFailedException(String message) {
         super(message);
     }
 }

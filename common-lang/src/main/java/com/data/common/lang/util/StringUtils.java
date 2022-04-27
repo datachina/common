@@ -1,4 +1,4 @@
-package lang.util;
+package com.data.common.lang.util;
 
 import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
