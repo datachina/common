@@ -10,6 +10,7 @@
     <version>1.0.0</version>
     <modules>
         <module>common-lang</module>
+        <module>common-web</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -51,6 +52,18 @@
                 <version>${spring.boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+            <!--common-lang-->
+            <dependency>
+                <groupId>com.github.datachina</groupId>
+                <artifactId>common-lang</artifactId>
+                <version>${common.version}</version>
+            </dependency>
+            <!--common-web-->
+            <dependency>
+                <groupId>com.github.datachina</groupId>
+                <artifactId>common-web</artifactId>
+                <version>${common.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
