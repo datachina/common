@@ -90,3 +90,7 @@ web-starter中的[ResponsePack](./common-web-starter/src/main/java/com/data/comm
 实现统一返回值。(待完善)
 8. 使用 spring-boot-starter-validation 进行优雅的参数校验。(待完善)
 9. 使用`@ExceptionHandler`全局异常拦截。(待完善)
+
+## 版本变更
+
+[版本变更记录](./CHANGELOG.md)
