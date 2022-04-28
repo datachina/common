@@ -72,22 +72,11 @@ common目前分为3个模块。
 
 1. lang中的异常类用途。(待完善)
 2. lang中的util使用示例。(待完善)
-3. web中的 [ResultEntity](./common-web/src/main/java/com/data/common/web/response/ResultEntity.java)
-   和 [ResponseCode](./common-web/src/main/java/com/data/common/web/response/ResponseCode.java) 的用途。(待完善)
-4.
-web-starter中的 [ConditionalOnMissingClassName](./common-web-starter/src/main/java/com/data/common/web/starter/annotation/ConditionalOnMissingClassName.java)
-和 [OnMissingClassNameCondition](./common-web-starter/src/main/java/com/data/common/web/starter/condition/OnMissingClassNameCondition.java)
-的用途。(待完善)
-5.
-web-starter中的跨域配置 [CorsConfig](./common-web-starter/src/main/java/com/data/common/web/starter/config/CorsConfig.java) (
-待完善)
-6.
-web-starter中的jackson时间模块[JacksonModule](./common-web-starter/src/main/java/com/data/common/web/starter/jackson/JacksonModule.java) (
-待完善)
-7.
-web-starter中的[ResponsePack](./common-web-starter/src/main/java/com/data/common/web/starter/annotation/ResponsePack.java)
-和 [ResponseBodyAdviceImpl](./common-web-starter/src/main/java/com/data/common/web/starter/response/ResponseBodyAdviceImpl.java)
-实现统一返回值。(待完善)
+3. web中的 [ResultEntity](./common-web/src/main/java/com/data/common/web/response/ResultEntity.java) 和 [ResponseCode](./common-web/src/main/java/com/data/common/web/response/ResponseCode.java) 的用途。(待完善)
+4. web-starter中的 [ConditionalOnMissingClassName](./common-web-starter/src/main/java/com/data/common/web/starter/annotation/ConditionalOnMissingClassName.java) 和 [OnMissingClassNameCondition](./common-web-starter/src/main/java/com/data/common/web/starter/condition/OnMissingClassNameCondition.java) 的用途。(待完善)
+5. web-starter中的跨域配置 [CorsConfig](./common-web-starter/src/main/java/com/data/common/web/starter/config/CorsConfig.java)。(待完善)
+6. web-starter中的jackson时间模块[JacksonModule](./common-web-starter/src/main/java/com/data/common/web/starter/jackson/JacksonModule.java)。 (待完善)
+7. web-starter中的[ResponsePack](./common-web-starter/src/main/java/com/data/common/web/starter/annotation/ResponsePack.java) 和 [ResponseBodyAdviceImpl](./common-web-starter/src/main/java/com/data/common/web/starter/response/ResponseBodyAdviceImpl.java) 实现统一返回值。(待完善)
 8. 使用 spring-boot-starter-validation 进行优雅的参数校验。(待完善)
 9. 使用`@ExceptionHandler`全局异常拦截。(待完善)
 
