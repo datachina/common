@@ -33,7 +33,7 @@
         <!--maven source 版本-->
         <maven.source.version>3.2.1</maven.source.version>
         <!--boot 版本-->
-        <spring.boot.version>2.6.6</spring.boot.version>
+        <spring.boot.version>2.6.7</spring.boot.version>
     </properties>
 
     <!--依赖管理-->
