@@ -1,6 +1,6 @@
-<h1 style="text-align: center">公共库</h1>
+<h1 align="center">公共库</h1>
 
-<p style="text-align: center">
+<p align="center">
     <a target="_blank" href="https://github.com/datachina/common">
         <img alt="stars" src="https://img.shields.io/github/stars/datachina/common?style=social"/>
     </a>
