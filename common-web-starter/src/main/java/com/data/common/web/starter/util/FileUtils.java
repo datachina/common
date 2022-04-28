@@ -1,4 +1,4 @@
-package com.data.common.web.util;
+package com.data.common.web.starter.util;
 
 import com.data.common.lang.exception.FileUploadFailException;
 import com.data.common.lang.exception.PermissionDeniedException;

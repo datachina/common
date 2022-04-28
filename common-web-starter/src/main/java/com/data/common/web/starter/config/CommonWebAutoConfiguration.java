@@ -1,6 +1,6 @@
 package com.data.common.web.starter.config;
 
-import com.data.common.web.jackson.JacksonModule;
+import com.data.common.web.starter.jackson.JacksonModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
