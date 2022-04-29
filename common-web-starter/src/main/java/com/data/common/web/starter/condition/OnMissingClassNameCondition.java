@@ -1,6 +1,7 @@
 package com.data.common.web.starter.condition;
 
 import com.data.common.lang.util.StringUtils;
+import com.data.common.web.starter.annotation.ConditionalOnMissingClassName;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -26,7 +27,7 @@ public class OnMissingClassNameCondition implements Condition {
     @Override
     public boolean matches(@NotNull ConditionContext context, @NotNull AnnotatedTypeMetadata metadata) {
         // 先取出注解的值
-        String classes = (String) Objects.requireNonNull(metadata.getAnnotationAttributes("com.data.common.web.starter.annotation.ConditionalOnMissingClassName")).get("classes");
+        String classes = (String) Objects.requireNonNull(metadata.getAnnotationAttributes(ConditionalOnMissingClassName.class.getName())).get("classes");
         // 获取beanFactory
         ConfigurableListableBeanFactory beanFactory = context.getBeanFactory();
         // 查看Context里面是否有同名Bean
