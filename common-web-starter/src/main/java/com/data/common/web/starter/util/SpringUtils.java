@@ -6,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
 /**
  * Spring工具类
@@ -14,12 +15,14 @@ import org.springframework.context.ApplicationContextAware;
  */
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 @Getter
+@SuppressWarnings("unused")
+@Component
 public class SpringUtils implements ApplicationContextAware {
 
     /**
      * Bean工厂
      */
-    private ApplicationContext applicationContext;
+    private static ApplicationContext applicationContext;
 
     /**
      * 通过构造方法注入Bean工厂
@@ -29,7 +32,7 @@ public class SpringUtils implements ApplicationContextAware {
      */
     @Override
     public void setApplicationContext(@NotNull ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
+        SpringUtils.applicationContext = applicationContext;
     }
 
     /**
@@ -39,8 +42,8 @@ public class SpringUtils implements ApplicationContextAware {
      * @param <T>   class类型
      * @return 获取到的class
      */
-    public <T> T getBean(Class<T> clazz) {
-        return this.applicationContext.getBean(clazz);
+    public static <T> T getBean(Class<T> clazz) {
+        return applicationContext.getBean(clazz);
     }
 
     /**
@@ -49,7 +52,7 @@ public class SpringUtils implements ApplicationContextAware {
      * @param className 指定className
      * @return 获取到的class
      */
-    public Object getBean(String className) {
-        return this.applicationContext.getBean(className);
+    public static Object getBean(String className) {
+        return applicationContext.getBean(className);
     }
 }
