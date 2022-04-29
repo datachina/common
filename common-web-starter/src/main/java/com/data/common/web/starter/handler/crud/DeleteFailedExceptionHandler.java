@@ -29,8 +29,9 @@ public class DeleteFailedExceptionHandler {
     @ExceptionHandler(DeleteFailedException.class)
     public ResultEntity handler(DeleteFailedException e) {
         ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.DELETE_FAILED.getDescription();
         if (cfg.getEnableLog()) {
-            log.error("删除失败:{}", e.getMessage());
+            log.error("删除失败:{}", msg);
         }
         if (cfg.getEnablePrintStack()) {
             e.printStackTrace();
@@ -38,7 +39,7 @@ public class DeleteFailedExceptionHandler {
         return ResultEntity
                 .builder()
                 .code(ResponseCode.DELETE_FAILED.getCode())
-                .msg(e.getMessage() != null ? e.getMessage() : ResponseCode.DELETE_FAILED.getDescription())
+                .msg(msg)
                 .build();
     }
 }

@@ -29,8 +29,9 @@ public class UpdateFailedExceptionHandler {
     @ExceptionHandler(UpdateFailedException.class)
     public ResultEntity handler(UpdateFailedException e) {
         ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.UPDATE_FAILED.getDescription();
         if (cfg.getEnableLog()) {
-            log.error("更新失败:{}", e.getMessage());
+            log.error("更新失败:{}", msg);
         }
         if (cfg.getEnablePrintStack()) {
             e.printStackTrace();
@@ -38,7 +39,7 @@ public class UpdateFailedExceptionHandler {
         return ResultEntity
                 .builder()
                 .code(ResponseCode.UPDATE_FAILED.getCode())
-                .msg(e.getMessage() != null ? e.getMessage() : ResponseCode.UPDATE_FAILED.getDescription())
+                .msg(msg)
                 .build();
     }
 }

@@ -29,8 +29,9 @@ public class QueryFailedExceptionHandler {
     @ExceptionHandler(QueryFailedException.class)
     public ResultEntity handler(QueryFailedException e) {
         ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.QUERY_FAILED.getDescription();
         if (cfg.getEnableLog()) {
-            log.error("查询失败:{}", e.getMessage());
+            log.error("查询失败:{}", msg);
         }
         if (cfg.getEnablePrintStack()) {
             e.printStackTrace();
@@ -38,7 +39,7 @@ public class QueryFailedExceptionHandler {
         return ResultEntity
                 .builder()
                 .code(ResponseCode.QUERY_FAILED.getCode())
-                .msg(e.getMessage() != null ? e.getMessage() : ResponseCode.QUERY_FAILED.getDescription())
+                .msg(msg)
                 .build();
     }
 }

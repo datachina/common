@@ -29,8 +29,9 @@ public class AddFailedExceptionHandler {
     @ExceptionHandler(AddFailedException.class)
     public ResultEntity handler(AddFailedException e) {
         ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.ADD_FAILED.getDescription();
         if (cfg.getEnableLog()) {
-            log.error("新增失败:{}", e.getMessage());
+            log.error("新增失败:{}", msg);
         }
         if (cfg.getEnablePrintStack()) {
             e.printStackTrace();
@@ -38,7 +39,7 @@ public class AddFailedExceptionHandler {
         return ResultEntity
                 .builder()
                 .code(ResponseCode.ADD_FAILED.getCode())
-                .msg(e.getMessage() != null ? e.getMessage() : ResponseCode.ADD_FAILED.getDescription())
+                .msg(msg)
                 .build();
     }
 }
