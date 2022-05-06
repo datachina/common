@@ -8,7 +8,7 @@
         <img alt="license" src="https://img.shields.io/github/license/datachina/common">
     </a>
     <a target="_blank" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
-        <img alt="jdk" src="https://img.shields.io/badge/JDK-1.8+-green.svg"/>
+        <img alt="jdk" src="https://img.shields.io/badge/JDK-11+-green.svg"/>
     </a>
     <a target="_blank" href="https://github.com/jidaojiuyou">
         <img alt="author" src="https://img.shields.io/badge/author-jidaojiuyou-ff3366.svg"/>
@@ -29,7 +29,78 @@ common目前分为3个模块。
 
 ## 仓库
 
-目前暂时只在jitpack发布仓库。*1.0版本即将到来*
+目前暂时只在jitpack发布仓库。
+
+### maven方式
+
+1. 添加jitpack的库
+
+```
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+	</repository>
+</repositories>
+```
+2. 添加依赖(按需)
+
+```
+<dependency>
+    <groupId>com.github.datachina.common</groupId>
+    <artifactId>common-lang</artifactId>
+    <version>自行替换版本号</version>
+</dependency>
+
+```
+
+```
+<dependency>
+    <groupId>com.github.datachina.common</groupId>
+    <artifactId>common-web</artifactId>
+    <version>自行替换版本号</version>
+</dependency>
+```
+
+```
+<dependency>
+    <groupId>com.github.datachina.common</groupId>
+    <artifactId>common-web-spring-boot-starter</artifactId>
+    <version>自行替换版本号</version>
+</dependency>
+```
+
+### gradle方式
+
+1. 添加jitpack的库
+
+```
+allprojects {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
+
+2. 添加依赖
+
+```
+dependencies {
+        implementation 'com.github.datachina.common:common-lang:自行替换版本号'
+}
+```
+
+```
+dependencies {
+        implementation 'com.github.datachina.common:common-web:自行替换版本号'
+}
+```
+
+```
+dependencies {
+        implementation 'com.github.datachina.common:common-web-spring-boot-starter:自行替换版本号'
+}
+```
 
 后续才可能会在maven等仓库发布
 
