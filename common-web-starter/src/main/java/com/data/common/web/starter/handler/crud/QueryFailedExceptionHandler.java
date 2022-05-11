@@ -4,11 +4,12 @@ import com.data.common.lang.exception.QueryFailedException;
 import com.data.common.lang.util.AssertUtils;
 import com.data.common.web.response.ResponseCode;
 import com.data.common.web.response.ResultEntity;
-import com.data.common.web.starter.annotation.ConditionalOnMissingClassName;
-import com.data.common.web.starter.config.ExceptionHandlerConfig;
 import com.data.common.web.starter.constant.BeanOrdered;
+import com.data.common.web.starter.properties.CommonWebProperties;
+import com.data.common.web.starter.util.ExceptionHandlerUtils;
 import com.data.common.web.starter.util.SpringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -23,19 +24,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 @Slf4j
 @Order(BeanOrdered.HIGH_PRECEDENCE)
-@ConditionalOnMissingClassName(classes = "QueryFailedExceptionHandler")
+@ConditionalOnProperty(prefix = "data.common.exception-handler.query", name = "enable", havingValue = "true")
 public class QueryFailedExceptionHandler {
 
     @ExceptionHandler(QueryFailedException.class)
     public ResultEntity handler(QueryFailedException e) {
-        ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        CommonWebProperties cfg = SpringUtils.getBean(CommonWebProperties.class);
         String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.QUERY_FAILED.getDescription();
-        if (cfg.getEnableLog()) {
-            log.error("查询失败:{}", msg);
-        }
-        if (cfg.getEnablePrintStack()) {
-            e.printStackTrace();
-        }
+        Boolean printStackTrace = cfg.getExceptionHandler().getQuery().getPrintStackTrace();
+        Boolean printLog = cfg.getExceptionHandler().getQuery().getPrintLog();
+        ExceptionHandlerUtils.preHandle(cfg, e, "查询失败", msg, printLog, printStackTrace, log);
         return ResultEntity
                 .builder()
                 .code(ResponseCode.QUERY_FAILED.getCode())

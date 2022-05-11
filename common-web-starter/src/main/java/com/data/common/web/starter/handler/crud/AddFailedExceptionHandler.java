@@ -4,11 +4,12 @@ import com.data.common.lang.exception.AddFailedException;
 import com.data.common.lang.util.AssertUtils;
 import com.data.common.web.response.ResponseCode;
 import com.data.common.web.response.ResultEntity;
-import com.data.common.web.starter.annotation.ConditionalOnMissingClassName;
-import com.data.common.web.starter.config.ExceptionHandlerConfig;
 import com.data.common.web.starter.constant.BeanOrdered;
+import com.data.common.web.starter.properties.CommonWebProperties;
+import com.data.common.web.starter.util.ExceptionHandlerUtils;
 import com.data.common.web.starter.util.SpringUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -23,19 +24,16 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 @Slf4j
 @Order(BeanOrdered.HIGH_PRECEDENCE)
-@ConditionalOnMissingClassName(classes = "AddFailedExceptionHandler")
+@ConditionalOnProperty(prefix = "data.common.exception-handler.add", name = "enable", havingValue = "true")
 public class AddFailedExceptionHandler {
 
     @ExceptionHandler(AddFailedException.class)
     public ResultEntity handler(AddFailedException e) {
-        ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
+        CommonWebProperties cfg = SpringUtils.getBean(CommonWebProperties.class);
         String msg = e.getMessage() != null ? e.getMessage() : ResponseCode.ADD_FAILED.getDescription();
-        if (cfg.getEnableLog()) {
-            log.error("新增失败:{}", msg);
-        }
-        if (cfg.getEnablePrintStack()) {
-            e.printStackTrace();
-        }
+        Boolean printStackTrace = cfg.getExceptionHandler().getAdd().getPrintStackTrace();
+        Boolean printLog = cfg.getExceptionHandler().getAdd().getPrintLog();
+        ExceptionHandlerUtils.preHandle(cfg, e, "新增失败", msg, printLog, printStackTrace, log);
         return ResultEntity
                 .builder()
                 .code(ResponseCode.ADD_FAILED.getCode())

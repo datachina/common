@@ -3,12 +3,13 @@ package com.data.common.web.starter.handler.valid;
 
 import com.data.common.web.response.ResponseCode;
 import com.data.common.web.response.ResultEntity;
-import com.data.common.web.starter.annotation.ConditionalOnMissingClassName;
-import com.data.common.web.starter.config.ExceptionHandlerConfig;
 import com.data.common.web.starter.constant.BeanOrdered;
+import com.data.common.web.starter.properties.CommonWebProperties;
+import com.data.common.web.starter.util.ExceptionHandlerUtils;
 import com.data.common.web.starter.util.SpringUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.core.annotation.Order;
 import org.springframework.validation.BindException;
 import org.springframework.validation.ObjectError;
@@ -30,7 +31,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @Order(BeanOrdered.HIGH_PRECEDENCE)
 @ConditionalOnClass(ConstraintViolationException.class)
-@ConditionalOnMissingClassName(classes = "ValidateExceptionHandler")
+@ConditionalOnProperty(prefix = "data.common.exception-handler.validate", name = "enable", havingValue = "true")
 public class ValidateExceptionHandler {
 
     /**
@@ -80,13 +81,10 @@ public class ValidateExceptionHandler {
      * @return 封装好的 ResultEntity
      */
     private ResultEntity getResultEntity(Exception e, String errors) {
-        ExceptionHandlerConfig cfg = SpringUtils.getBean(ExceptionHandlerConfig.class);
-        if (cfg.getEnableLog()) {
-            log.error("请求参数异常:{}", errors);
-        }
-        if (cfg.getEnablePrintStack()) {
-            e.printStackTrace();
-        }
+        CommonWebProperties cfg = SpringUtils.getBean(CommonWebProperties.class);
+        Boolean printStackTrace = cfg.getExceptionHandler().getAdd().getPrintStackTrace();
+        Boolean printLog = cfg.getExceptionHandler().getAdd().getPrintLog();
+        ExceptionHandlerUtils.preHandle(cfg, e, "请求参数异常", errors, printLog, printStackTrace, log);
         return ResultEntity
                 .builder()
                 .code(ResponseCode.PARAM_CHECK_EXCEPTION.getCode())
