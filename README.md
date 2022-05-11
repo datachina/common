@@ -13,6 +13,9 @@
     <a target="_blank" href="https://github.com/jidaojiuyou">
         <img alt="author" src="https://img.shields.io/badge/author-jidaojiuyou-ff3366.svg"/>
     </a>
+    <a target="_blank" href="https://jitpack.io/#datachina/common">
+        <img alt="version" src="https://jitpack.io/v/datachina/common.svg"/>
+    </a>
 </p>
 
 ## 说明
