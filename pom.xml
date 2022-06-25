@@ -5,7 +5,7 @@
     <!--基础信息-->
     <groupId>com.data</groupId>
     <artifactId>common</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.2</version>
     <modelVersion>4.0.0</modelVersion>
     <name>common</name>
     <description>公共服务</description>
@@ -21,7 +21,7 @@
     <!--配置-->
     <properties>
         <!--当前 common 的版本-->
-        <common.version>1.0.0</common.version>
+        <common.version>1.0.2</common.version>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
@@ -33,7 +33,7 @@
         <!--maven source 版本-->
         <maven.source.version>3.2.1</maven.source.version>
         <!--boot 版本-->
-        <spring.boot.version>2.6.7</spring.boot.version>
+        <spring.boot.version>2.7.1</spring.boot.version>
     </properties>
 
     <!--依赖管理-->
