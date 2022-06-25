@@ -3,6 +3,7 @@ package com.data.common.web.starter.config;
 import com.data.common.web.starter.jackson.JacksonModule;
 import com.data.common.web.starter.properties.CommonWebProperties;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +20,7 @@ import org.springframework.web.filter.CorsFilter;
  */
 @ComponentScan("com.data.common")
 @Configuration
+@AutoConfiguration
 @EnableConfigurationProperties(CommonWebProperties.class)
 public class CommonWebAutoConfiguration {
 
