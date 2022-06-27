@@ -45,6 +45,34 @@ public enum ResponseCode {
      */
     FILE_UPLOAD_FAILED("12000", "文件上传失败"),
     /**
+     * 数据库连接失败异常
+     */
+    DATABASE_CONNECT_FAILED("13000", "数据库连接失败"),
+    /**
+     * Redis 连接失败
+     */
+    REDIS_CONNECT_FAILED("13100", "Redis连接失败"),
+    /**
+     * MySQL 连接失败
+     */
+    MYSQL_CONNECT_FAILED("13200", "MySQL连接失败"),
+    /**
+     * ORACLE 连接失败
+     */
+    ORACLE_CONNECT_FAILED("13300", "Oracle连接失败"),
+    /**
+     * SQL SERVER 连接失败
+     */
+    SQL_SERVER_CONNECT_FAILED("13400", "SQL_SERVER连接失败"),
+    /**
+     * MongoDB 连接失败
+     */
+    MONGO_CONNECT_FAILED("13500", "MongoDB连接失败"),
+    /**
+     * ES 连接失败
+     */
+    ES_CONNECT_FAILED("13600", "Elasticsearch连接失败"),
+    /**
      * 注册登录错误
      */
     REGISTER_OR_LOGIN_ERROR("20000", "注册登录错误"),
