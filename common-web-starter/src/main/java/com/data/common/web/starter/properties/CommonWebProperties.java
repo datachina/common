@@ -68,7 +68,10 @@ public class CommonWebProperties {
          * Redis连接异常拦截器配置
          */
         private RedisConnectFailure redisConnectFailure;
-
+        /**
+         * SQL异常拦截器配置
+         */
+        private Sql sql;
 
         /**
          * 异常拦截器全局配置类
@@ -202,6 +205,26 @@ public class CommonWebProperties {
             private Boolean printStackTrace;
             /**
              * 是否启用Redis连接异常拦截器打印错误日志.
+             */
+            private Boolean printLog;
+        }
+
+        /**
+         * SQL异常拦截器配置类
+         */
+        @Getter
+        @Setter
+        public static class Sql {
+            /**
+             * 是否启用SQL异常拦截器.
+             */
+            private Boolean enable = false;
+            /**
+             * 是否启用SQL异常拦截器打印异常栈.
+             */
+            private Boolean printStackTrace;
+            /**
+             * 是否启用SQL异常拦截器打印错误日志.
              */
             private Boolean printLog;
         }

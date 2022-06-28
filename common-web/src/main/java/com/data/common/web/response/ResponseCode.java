@@ -199,7 +199,7 @@ public enum ResponseCode {
     /**
      * 服务器错误
      */
-    EXCEPTION("50000", "服务器错误"),
+    SERVER_EXCEPTION("50000", "服务器错误"),
     /**
      * 临时停服
      */
@@ -207,7 +207,11 @@ public enum ResponseCode {
     /**
      * 服务升级中
      */
-    SERVICE_UPDATING("50200", "服务升级中");
+    SERVICE_UPDATING("50200", "服务升级中"),
+    /**
+     * 数据库异常
+     */
+    DATABASE_EXCEPTION("51000", "数据库异常");
 
     private final String code;
     private final String description;
