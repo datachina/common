@@ -15,12 +15,16 @@
         <version>${revision}</version>
     </parent>
 
-
     <dependencyManagement>
         <dependencies>
             <dependency>
                 <groupId>io.github.datachina</groupId>
                 <artifactId>common-lang</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.datachina</groupId>
+                <artifactId>common-web</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

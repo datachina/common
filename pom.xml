@@ -33,12 +33,14 @@
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <lombok.version>1.18.28</lombok.version>
+        <jackson.version>2.15.2</jackson.version>
     </properties>
 
     <!-- 所有模块 -->
     <modules>
         <module>common-dependencies</module>
         <module>common-lang</module>
+        <module>common-web</module>
     </modules>
 
     <!-- 仓库信息 -->
