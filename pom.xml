@@ -41,6 +41,7 @@
         <module>common-dependencies</module>
         <module>common-lang</module>
         <module>common-web</module>
+        <module>common-web-spring</module>
     </modules>
 
     <!-- 仓库信息 -->

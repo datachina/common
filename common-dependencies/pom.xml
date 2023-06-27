@@ -27,6 +27,11 @@
                 <artifactId>common-web</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.datachina</groupId>
+                <artifactId>common-web-spring</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
