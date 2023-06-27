@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <!-- 基础信息 -->
-    <artifactId>common-dependencies</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>common-lang</artifactId>
+    <packaging>jar</packaging>
 
     <!-- 父工程 -->
     <parent>
@@ -14,15 +14,4 @@
         <artifactId>common</artifactId>
         <version>${revision}</version>
     </parent>
-
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.github.datachina</groupId>
-                <artifactId>common-lang</artifactId>
-                <version>${revision}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

@@ -32,11 +32,13 @@
         <maven-javadoc-plugin.version>3.5.0</maven-javadoc-plugin.version>
         <maven-source-plugin.version>3.3.0</maven-source-plugin.version>
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
+        <lombok.version>1.18.28</lombok.version>
     </properties>
 
     <!-- 所有模块 -->
     <modules>
         <module>common-dependencies</module>
+        <module>common-lang</module>
     </modules>
 
     <!-- 仓库信息 -->
@@ -62,6 +64,15 @@
             <url>https://opensource.org/licenses/MIT</url>
         </license>
     </licenses>
+
+    <dependencies>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
 
     <!-- 项目构建 -->
     <build>
