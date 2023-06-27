@@ -43,6 +43,7 @@
         <module>common-web</module>
         <module>common-web-spring</module>
         <module>common-web-spring-boot-starter</module>
+        <module>common-validation-spring-boot-starter</module>
     </modules>
 
     <!-- 仓库信息 -->

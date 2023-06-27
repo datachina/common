@@ -37,6 +37,11 @@
                 <artifactId>common-web-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.datachina</groupId>
+                <artifactId>common-validation-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>
