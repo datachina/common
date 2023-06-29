@@ -34,6 +34,8 @@
         <flatten-maven-plugin.version>1.5.0</flatten-maven-plugin.version>
         <lombok.version>1.18.28</lombok.version>
         <jackson.version>2.15.2</jackson.version>
+        <spring-boot2.version>2.7.13</spring-boot2.version>
+        <spring-boot3.version>3.1.1</spring-boot3.version>
     </properties>
 
     <!-- 所有模块 -->
@@ -41,11 +43,8 @@
         <module>common-dependencies</module>
         <module>common-lang</module>
         <module>common-web</module>
-        <module>common-web-spring</module>
-        <module>common-web-spring-boot-starter</module>
-        <module>common-validation-spring-boot-starter</module>
-        <module>common-snowflake-id-spring-boot-starter</module>
-        <module>common-mp-ext-spring-boot-starter</module>
+        <module>common-spring-boot-2</module>
+        <module>common-spring-boot-3</module>
     </modules>
 
     <!-- 仓库信息 -->
@@ -72,6 +71,7 @@
         </license>
     </licenses>
 
+    <!-- 依赖 -->
     <dependencies>
         <!--lombok-->
         <dependency>

@@ -7,11 +7,11 @@
     <!-- 父工程 -->
     <parent>
         <groupId>io.github.datachina</groupId>
-        <artifactId>common</artifactId>
+        <artifactId>common-spring-boot-3</artifactId>
         <version>${revision}</version>
     </parent>
 
     <!-- 基础信息 -->
-    <artifactId>common-web-spring</artifactId>
+    <artifactId>common-web-spring-boot3-starter</artifactId>
     <packaging>jar</packaging>
 </project>

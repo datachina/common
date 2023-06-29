@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- 父工程 -->
+    <parent>
+        <groupId>io.github.datachina</groupId>
+        <artifactId>common</artifactId>
+        <version>${revision}</version>
+    </parent>
+
+    <!-- 基础信息 -->
+    <artifactId>common-spring-boot-3</artifactId>
+    <packaging>pom</packaging>
+
+    <!-- 一些属性 -->
+    <properties>
+        <jdk.version>17</jdk.version>
+    </properties>
+
+    <!-- 子模块 -->
+    <modules>
+        <module>common-validation-spring-boot3-starter</module>
+        <module>common-web-spring-boot3-starter</module>
+    </modules>
+
+    <!-- 依赖申明 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot3.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

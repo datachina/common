@@ -7,11 +7,11 @@
     <!-- 父工程 -->
     <parent>
         <groupId>io.github.datachina</groupId>
-        <artifactId>common</artifactId>
-        <version>1.0.4</version>
+        <artifactId>common-spring-boot-2</artifactId>
+        <version>${revision}</version>
     </parent>
 
     <!-- 基础信息 -->
-    <artifactId>common-snowflake-id-spring-boot-starter</artifactId>
+    <artifactId>common-web-spring-boot-starter</artifactId>
     <packaging>jar</packaging>
 </project>

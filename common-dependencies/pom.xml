@@ -29,12 +29,12 @@
             </dependency>
             <dependency>
                 <groupId>io.github.datachina</groupId>
-                <artifactId>common-web-spring</artifactId>
+                <artifactId>common-web-spring-boot-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
                 <groupId>io.github.datachina</groupId>
-                <artifactId>common-web-spring-boot-starter</artifactId>
+                <artifactId>common-web-spring-boot3-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
             <dependency>
@@ -44,12 +44,7 @@
             </dependency>
             <dependency>
                 <groupId>io.github.datachina</groupId>
-                <artifactId>common-snowflake-id-spring-boot-starter</artifactId>
-                <version>${revision}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.github.datachina</groupId>
-                <artifactId>common-mp-ext-spring-boot-starter</artifactId>
+                <artifactId>common-validation-spring-boot3-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
         </dependencies>

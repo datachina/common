@@ -7,11 +7,19 @@
     <!-- 父工程 -->
     <parent>
         <groupId>io.github.datachina</groupId>
-        <artifactId>common</artifactId>
+        <artifactId>common-spring-boot-3</artifactId>
         <version>${revision}</version>
     </parent>
 
     <!-- 基础信息 -->
-    <artifactId>common-validation-spring-boot-starter</artifactId>
+    <artifactId>common-validation-spring-boot3-starter</artifactId>
     <packaging>jar</packaging>
+
+    <!-- 依赖 -->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+    </dependencies>
 </project>
