@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.data.common.web.starter.response.ResponseBodyAdviceImpl,\
+com.data.common.web.starter.utils.SpringUtils,\
+com.data.common.web.starter.config.DefaultCorsConfiguration

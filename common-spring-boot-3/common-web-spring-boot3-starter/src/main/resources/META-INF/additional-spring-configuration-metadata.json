@@ -1,0 +1,25 @@
+{
+  "properties": [
+    {
+      "name": "data.common.default-cors.enable",
+      "type": "java.lang.Boolean",
+      "description": "是否启用默认跨域配置.",
+      "defaultValue": false
+    }
+  ],
+  "hints": [
+    {
+      "name": "data.common.default-cors.enable",
+      "values": [
+        {
+          "value": "true",
+          "description": "启用默认的跨域配置."
+        },
+        {
+          "value": "false",
+          "description": "不启用默认的跨域配置."
+        }
+      ]
+    }
+  ]
+}

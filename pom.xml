@@ -36,6 +36,7 @@
         <jackson.version>2.15.2</jackson.version>
         <spring-boot2.version>2.7.13</spring-boot2.version>
         <spring-boot3.version>3.1.1</spring-boot3.version>
+        <jetbrain-annotation.version>24.0.1</jetbrain-annotation.version>
     </properties>
 
     <!-- 所有模块 -->
@@ -78,6 +79,11 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${jetbrain-annotation.version}</version>
         </dependency>
     </dependencies>
 
