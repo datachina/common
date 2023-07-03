@@ -1,4 +1,4 @@
-package com.data.common.validation.validate;
+package com.data.common.web.validation.validate;
 
 
 import jakarta.validation.groups.Default;

@@ -1,7 +1,7 @@
-package com.data.common.validation.validate;
+package com.data.common.web.validation.validate;
 
 
-import com.data.common.validation.annotation.ChinaPhoneNumber;
+import com.data.common.web.validation.annotation.ChinaPhoneNumber;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

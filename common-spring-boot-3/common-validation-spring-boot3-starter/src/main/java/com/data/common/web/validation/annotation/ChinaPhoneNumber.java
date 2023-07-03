@@ -1,6 +1,6 @@
-package com.data.common.validation.annotation;
+package com.data.common.web.validation.annotation;
 
-import com.data.common.validation.validate.ChinaPhoneNumberValidator;
+import com.data.common.web.validation.validate.ChinaPhoneNumberValidator;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
