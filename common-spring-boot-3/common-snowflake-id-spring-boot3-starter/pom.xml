@@ -12,7 +12,7 @@
     </parent>
 
     <!-- 基础信息 -->
-    <artifactId>common-snowflake-id-spring-boot-starter</artifactId>
+    <artifactId>common-snowflake-id-spring-boot3-starter</artifactId>
     <packaging>jar</packaging>
 
     <!-- 依赖 -->
