@@ -20,6 +20,7 @@
         <module>common-validation-spring-boot-starter</module>
         <module>common-web-spring-boot-starter</module>
         <module>common-mp-ext-spring-boot-starter</module>
+        <module>common-snowflake-id-spring-boot-starter</module>
     </modules>
 
     <!-- 依赖申明 -->

@@ -39,6 +39,7 @@
         <jetbrain-annotation.version>24.0.1</jetbrain-annotation.version>
         <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
         <hutool.version>5.8.18</hutool.version>
+        <snowflake.version>1.0.6</snowflake.version>
     </properties>
 
     <!-- 所有模块 -->

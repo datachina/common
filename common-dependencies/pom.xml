@@ -58,6 +58,16 @@
                 <artifactId>common-mp-ext-spring-boot3-starter</artifactId>
                 <version>${revision}</version>
             </dependency>
+            <dependency>
+                <groupId>io.github.datachina</groupId>
+                <artifactId>common-snowflake-id-spring-boot-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.datachina</groupId>
+                <artifactId>common-snowflake-id-spring-boot3-starter</artifactId>
+                <version>${revision}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 </project>

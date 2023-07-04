@@ -25,6 +25,7 @@
         <module>common-validation-spring-boot3-starter</module>
         <module>common-web-spring-boot3-starter</module>
         <module>common-mp-ext-spring-boot3-starter</module>
+        <module>common-snowflake-id-spring-boot3-starter</module>
     </modules>
 
     <!-- 依赖申明 -->
