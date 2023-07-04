@@ -1,0 +1,3 @@
+com.data.common.mp.ext.factory.DictBindStrategyFactory
+com.data.common.mp.ext.strategy.impl.DefaultDictBindStrategy
+com.data.common.mp.ext.interceptor.DictBindInterceptor

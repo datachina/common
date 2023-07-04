@@ -37,6 +37,8 @@
         <spring-boot2.version>2.7.13</spring-boot2.version>
         <spring-boot3.version>3.1.1</spring-boot3.version>
         <jetbrain-annotation.version>24.0.1</jetbrain-annotation.version>
+        <mybatis-plus.version>3.5.3.1</mybatis-plus.version>
+        <hutool.version>5.8.18</hutool.version>
     </properties>
 
     <!-- 所有模块 -->
@@ -86,6 +88,26 @@
             <version>${jetbrain-annotation.version}</version>
         </dependency>
     </dependencies>
+
+    <!-- 依赖申明 -->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+            <!--hutool依赖-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-bom</artifactId>
+                <version>${hutool.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
 
     <!-- 项目构建 -->
     <build>
