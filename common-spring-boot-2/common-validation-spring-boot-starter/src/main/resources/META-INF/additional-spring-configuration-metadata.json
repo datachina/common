@@ -1,0 +1,53 @@
+{
+  "groups": [
+    {
+      "name": "data.common.validation",
+      "type": "com.data.common.web.validation.properties.ValidationProperties",
+      "sourceType": "com.data.common.web.validation.properties.ValidationProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "data.common.validation.print-log",
+      "type": "java.lang.Boolean",
+      "description": "是否打印参数校验异常日志.",
+      "sourceType": "com.data.common.web.validation.properties.ValidationProperties",
+      "defaultValue": false
+    },
+    {
+      "name": "data.common.validation.print-stack-trace",
+      "type": "java.lang.Boolean",
+      "description": "是否打印参数校验异常栈.",
+      "sourceType": "com.data.common.web.validation.properties.ValidationProperties",
+      "defaultValue": false
+    }
+  ],
+  "hints": [
+    {
+      "name": "data.common.validation.print-log",
+      "values": [
+        {
+          "value": "true",
+          "description": "打印参数校验异常日志."
+        },
+        {
+          "value": "false",
+          "description": "不打印参数校验异常日志."
+        }
+      ]
+    },
+    {
+      "name": "data.common.validation.print-stack-trace",
+      "values": [
+        {
+          "value": "true",
+          "description": "打印参数校验异常栈."
+        },
+        {
+          "value": "false",
+          "description": "不打印参数校验异常栈."
+        }
+      ]
+    }
+  ]
+}
