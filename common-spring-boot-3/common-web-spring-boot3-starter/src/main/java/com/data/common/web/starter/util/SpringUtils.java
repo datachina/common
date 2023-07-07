@@ -1,4 +1,4 @@
-package com.data.common.web.starter.utils;
+package com.data.common.web.starter.util;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.data.common.web.starter.utils;
+package com.data.common.web.starter.util;
 
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateDeserializer;
