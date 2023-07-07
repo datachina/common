@@ -10,8 +10,8 @@
     <a target="_blank" href="https://github.com/jidaojiuyou">
         <img alt="author" src="https://img.shields.io/badge/author-jidaojiuyou-ff3366.svg"/>
     </a>
-    <a target="_blank" href="https://jitpack.io/#datachina/common">
-        <img alt="version" src="https://jitpack.io/v/datachina/common.svg"/>
+    <a target="_blank" href="https://repo1.maven.org/maven2/io/github/datachina/">
+        <img alt="version" src="https://img.shields.io/maven-central/v/io.github.datachina/common"/>
     </a><br>
     <a target="_blank" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
         <img alt="SpringBoot" src="https://img.shields.io/badge/Spring Boot-2.7.13-ff3300.svg"/>
