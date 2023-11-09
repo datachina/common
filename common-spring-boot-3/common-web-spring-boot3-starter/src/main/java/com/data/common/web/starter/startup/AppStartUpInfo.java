@@ -48,7 +48,7 @@ public class AppStartUpInfo implements CommandLineRunner {
         String startSuccess = "\n-------------" + (applicationName.length() > 0 ? " " + applicationName : " ") + (active != null ? " (" + active + ")" : "") + " 启动成功 -------------\n";
         System.out.println(startSuccess);
         // 本地访问地址
-        String local = "\t- Local-1:   http://localhost:" + port + (path.startsWith("/") ? path : "/" + path) + "\n\t- Local-2:   http://127.0.0.1:" + port + path;
+        String local = "\t- Local-1:   http://localhost:" + port + (path.startsWith("/") ? path : "/" + path) + "\n\t- Local-2:   http://127.0.0.1:" + port + (path.startsWith("/") ? path : "/" + path);
         System.out.println(local);
         // 远程访问地址
         try {
