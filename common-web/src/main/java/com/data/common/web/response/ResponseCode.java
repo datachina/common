@@ -145,6 +145,14 @@ public enum ResponseCode {
      */
     TOKEN_REPLACED("23500", "token被顶下线"),
     /**
+     * token超过有效期已被冻结
+     */
+    TOKEN_FREEZE("23600", "token超过有效期已被冻结"),
+    /**
+     * 未按照指定前缀提交token
+     */
+    NO_PREFIX("23700", "未按照指定前缀提交token"),
+    /**
      * 数据错误
      */
     DATA_ERROR("30000", "数据错误"),
