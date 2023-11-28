@@ -205,6 +205,18 @@ public enum ResponseCode {
      */
     PERMISSION_DENIED("40000", "没有权限"),
     /**
+     * 没有角色
+     */
+    ROLE_DENIED("41000", "没有角色"),
+    /**
+     * Http Basic认证失败
+     */
+    BASIC_AUTH_DENIED("42000", "Http Basic认证失败"),
+    /**
+     * 二级认证失败
+     */
+    OPEN_SAFE_ERROR("43000", "二级认证失败"),
+    /**
      * 服务器错误
      */
     SERVER_EXCEPTION("50000", "服务器错误"),
