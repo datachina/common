@@ -1,6 +1,15 @@
-target/
+### IntelliJ IDEA ###
 .idea
 *.iml
+target/
+
+### VS Code ###
 .vscode/
+
+### Mac OS ###
 .DS_Store
-**.flattened-pom.xml
+._*
+
+### maven ###
+.flattened-pom.xml
+.mvn/wrapper/maven-wrapper.jar
