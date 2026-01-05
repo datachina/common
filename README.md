@@ -1,3 +1,4 @@
+<!--suppress HtmlDeprecatedAttribute -->
 <h1 align="center">公共库</h1>
 
 <p align="center">
@@ -77,6 +78,6 @@
 
 [版本变更记录](./CHANGELOG.md)
 
-## Bug修复
+## Bug 修复
 
-[Bug修复记录](./BUGFIX.md)
+[Bug 修复记录](./BUGFIX.md)
