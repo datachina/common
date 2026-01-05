@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class TypeUtils {
 

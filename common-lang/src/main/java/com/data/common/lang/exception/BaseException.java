@@ -7,6 +7,7 @@ import lombok.Getter;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @Getter
 public class BaseException extends RuntimeException {
 

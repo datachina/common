@@ -10,6 +10,7 @@ import lombok.Getter;
  */
 @Getter
 @AllArgsConstructor
+@SuppressWarnings("unused")
 public enum ResponseCode {
 
     /**
@@ -51,27 +52,27 @@ public enum ResponseCode {
     /**
      * Redis 连接失败
      */
-    REDIS_CONNECT_FAILED("13100", "Redis连接失败"),
+    REDIS_CONNECT_FAILED("13100", "Redis 连接失败"),
     /**
      * MySQL 连接失败
      */
-    MYSQL_CONNECT_FAILED("13200", "MySQL连接失败"),
+    MYSQL_CONNECT_FAILED("13200", "MySQL 连接失败"),
     /**
      * ORACLE 连接失败
      */
-    ORACLE_CONNECT_FAILED("13300", "Oracle连接失败"),
+    ORACLE_CONNECT_FAILED("13300", "Oracle 连接失败"),
     /**
      * SQL SERVER 连接失败
      */
-    SQL_SERVER_CONNECT_FAILED("13400", "SQL_SERVER连接失败"),
+    SQL_SERVER_CONNECT_FAILED("13400", "SQL_SERVER 连接失败"),
     /**
      * MongoDB 连接失败
      */
-    MONGO_CONNECT_FAILED("13500", "MongoDB连接失败"),
+    MONGO_CONNECT_FAILED("13500", "MongoDB 连接失败"),
     /**
      * ES 连接失败
      */
-    ES_CONNECT_FAILED("13600", "Elasticsearch连接失败"),
+    ES_CONNECT_FAILED("13600", "Elasticsearch 连接失败"),
     /**
      * 注册登录错误
      */
@@ -81,13 +82,13 @@ public enum ResponseCode {
      */
     USERNAME_OR_PASSWORD_NOT_BE_EMPTY("20100", "账号或密码不能为空"),
     /**
-     * 认证code不能为空
+     * 认证 code 不能为空
      */
-    AUTH_CODE_NOT_BE_EMPTY("20200", "认证code不能为空"),
+    AUTH_CODE_NOT_BE_EMPTY("20200", "认证 code 不能为空"),
     /**
-     * 认证code已失效
+     * 认证 code 已失效
      */
-    AUTH_CODE_INVALID("20300", "认证code已失效"),
+    AUTH_CODE_INVALID("20300", "认证 code 已失效"),
     /**
      * 注册失败
      */
@@ -125,33 +126,33 @@ public enum ResponseCode {
      */
     NOT_LOGGED_IN("23000", "未登录"),
     /**
-     * 无token
+     * 无 token
      */
-    TOKEN_IS_MISSING("23100", "无token"),
+    TOKEN_IS_MISSING("23100", "无 token"),
     /**
-     * token无效
+     * token 无效
      */
-    TOKEN_INVALID("23200", "token无效"),
+    TOKEN_INVALID("23200", "token 无效"),
     /**
-     * token已过期
+     * token 已过期
      */
-    TOKEN_EXPIRED("23300", "token已过期"),
+    TOKEN_EXPIRED("23300", "token 已过期"),
     /**
-     * token被踢下线
+     * token 被踢下线
      */
-    TOKEN_REMOVED("23400", "token被踢下线"),
+    TOKEN_REMOVED("23400", "token 被踢下线"),
     /**
-     * token被顶下线
+     * token 被顶下线
      */
-    TOKEN_REPLACED("23500", "token被顶下线"),
+    TOKEN_REPLACED("23500", "token 被顶下线"),
     /**
-     * token超过有效期已被冻结
+     * token 超过有效期已被冻结
      */
-    TOKEN_FREEZE("23600", "token超过有效期已被冻结"),
+    TOKEN_FREEZE("23600", "token 超过有效期已被冻结"),
     /**
-     * 未按照指定前缀提交token
+     * 未按照指定前缀提交 token
      */
-    NO_PREFIX("23700", "未按照指定前缀提交token"),
+    NO_PREFIX("23700", "未按照指定前缀提交 token"),
     /**
      * 数据错误
      */
@@ -209,9 +210,9 @@ public enum ResponseCode {
      */
     ROLE_DENIED("41000", "没有角色"),
     /**
-     * Http Basic认证失败
+     * Http Basic 认证失败
      */
-    BASIC_AUTH_DENIED("42000", "Http Basic认证失败"),
+    BASIC_AUTH_DENIED("42000", "Http Basic 认证失败"),
     /**
      * 二级认证失败
      */

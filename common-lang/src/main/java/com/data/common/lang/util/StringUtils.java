@@ -10,23 +10,24 @@ import java.util.List;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class StringUtils {
     /**
-     * 指定值是否为null或为空字符串
+     * 指定值是否为 null 或为空字符串
      *
      * @param str 指定字符串
-     * @return 是否为null或者空字符串
+     * @return 是否为 null 或者空字符串
      */
     public static boolean isEmpty(String str) {
-        return str == null || "".equals(str);
+        return str == null || str.isEmpty();
     }
 
     /**
-     * 指定值是否不为null或为空字符串
+     * 指定值是否不为 null 或为空字符串
      *
      * @param str 指定字符串
-     * @return 是否不为null或者空字符串
+     * @return 是否不为 null 或者空字符串
      */
     public static boolean isNotEmpty(String str) {
         return !isEmpty(str);
@@ -40,22 +41,22 @@ public class StringUtils {
      */
     public static List<String> convertStringToList(String str) {
         List<String> list = new ArrayList<>();
-        // str为空则返回空list
+        // str 为空则返回空 list
         if (isEmpty(str)) {
             return list;
         }
         // 不为空则转为数组
         String[] arr = str.split(",");
-        // 遍历放入list
+        // 遍历放入 list
         for (String s : arr) {
             // 去掉首尾空格
             s = s.trim();
-            // 如果不为空则存入list
+            // 如果不为空则存入 list
             if (isNotEmpty(s)) {
                 list.add(s);
             }
         }
-        // 返回list
+        // 返回 list
         return list;
     }
 

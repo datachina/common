@@ -9,7 +9,7 @@ import java.util.UUID;
  *
  * @author jidaojiuyou
  */
-@SuppressWarnings("AlibabaClassNamingShouldBeCamel")
+@SuppressWarnings("unused")
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class UUIDUtils {
 

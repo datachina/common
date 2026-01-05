@@ -5,6 +5,7 @@ package com.data.common.lang.error;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 public class WorkerIdObtainError extends Error {
     public WorkerIdObtainError() {
         super();

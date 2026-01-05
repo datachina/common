@@ -10,11 +10,12 @@ import java.util.List;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @Getter
 public class ScopeDoesNotAllowedException extends BaseException {
 
     /**
-     * 未授权的scope
+     * 未授权的 scope
      */
     private final List<String> scope;
 
@@ -37,14 +38,14 @@ public class ScopeDoesNotAllowedException extends BaseException {
     }
 
     /**
-     * scope构造
+     * scope 构造
      */
     public ScopeDoesNotAllowedException(List<String> scope) {
         this.scope = scope;
     }
 
     /**
-     * 错误消息和scope构造
+     * 错误消息和 scope 构造
      *
      * @param message 错误消息
      * @param scope   scope

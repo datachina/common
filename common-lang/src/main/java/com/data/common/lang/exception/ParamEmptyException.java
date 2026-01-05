@@ -5,6 +5,7 @@ package com.data.common.lang.exception;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 public class ParamEmptyException extends BaseException {
 
     /**

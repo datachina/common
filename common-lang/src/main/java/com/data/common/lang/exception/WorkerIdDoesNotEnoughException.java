@@ -5,13 +5,14 @@ package com.data.common.lang.exception;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 public class WorkerIdDoesNotEnoughException extends BaseException {
 
     /**
      * 无参构造
      */
     public WorkerIdDoesNotEnoughException() {
-        super("WorkerId不够了");
+        super("WorkerId 不够了");
     }
 
     /**

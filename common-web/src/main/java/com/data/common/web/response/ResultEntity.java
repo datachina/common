@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor

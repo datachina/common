@@ -7,16 +7,17 @@ import lombok.NoArgsConstructor;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class UrlUtils {
 
     /**
-     * 在url上拼接上kv参数
+     * 在 url 上拼接上 kv 参数
      *
      * @param url   url
      * @param key   参数名称
      * @param value 参数值
-     * @return 拼接后的url字符串
+     * @return 拼接后的 url 字符串
      */
     public static String joinParam(String url, String key, Object value) {
         // 如果参数为空, 直接返回
@@ -28,15 +29,15 @@ public class UrlUtils {
 
 
     /**
-     * 在url上拼接上kv参数
+     * 在 url 上拼接上 kv 参数
      *
      * @param url      url
      * @param paramStr 参数, 例如 id=1001
-     * @return 拼接后的url字符串
+     * @return 拼接后的 url 字符串
      */
     public static String joinParam(String url, String paramStr) {
         // 如果参数为空, 直接返回
-        if (paramStr == null || paramStr.length() == 0) {
+        if (paramStr == null || paramStr.isEmpty()) {
             return url;
         }
         if (url == null) {

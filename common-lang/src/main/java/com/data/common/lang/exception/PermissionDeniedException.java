@@ -10,6 +10,7 @@ import java.util.List;
  *
  * @author jidaojiuyou
  */
+@SuppressWarnings("unused")
 @Getter
 public class PermissionDeniedException extends BaseException {
 
