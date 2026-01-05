@@ -1,3 +1,0 @@
-com.data.snowflake.config.SnowflakeIdConfiguration
-com.data.snowflake.workerid.impl.WorkerIdDefaultImpl
-com.data.snowflake.workerid.impl.WorkerIdGeneratorRedisImpl
