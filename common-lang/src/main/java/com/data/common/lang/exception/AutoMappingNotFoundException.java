@@ -24,6 +24,12 @@ public class AutoMappingNotFoundException extends BaseException {
         super(message);
     }
 
+    /**
+     * 类型转换失败
+     *
+     * @param srcClass  原始类型
+     * @param destClass 目标类似
+     */
     public AutoMappingNotFoundException(Class<?> srcClass, Class<?> destClass) {
         super("未找到 " + srcClass.getName() + " 到 " + destClass.getName() + "的转换策略。 请检查 @AutoMappingClass 是否标注在 " + srcClass.getName() + " 或 " + destClass.getName() + "上。");
     }
