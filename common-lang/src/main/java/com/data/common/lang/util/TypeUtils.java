@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class TypeUtils {
 
     /**
-     * 是否为 {@link byte} 或 {@link Byte}
+     * 是否为 {@link Byte}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -22,7 +22,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link short} 或 {@link Short}
+     * 是否为 {@link Short}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -32,7 +32,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link int} 或 {@link Integer}
+     * 是否为 {@link Integer}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -42,7 +42,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link long} 或 {@link Long}
+     * 是否为 {@link Long}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -52,7 +52,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link float} 或 {@link Float}
+     * 是否为 {@link Float}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -62,7 +62,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link double} 或 {@link Double}
+     * 是否为 {@link Double}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -72,7 +72,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link char} 或 {@link Character}
+     * 是否为 {@link Character}
      *
      * @param o 被判断的值
      * @return 判断结果
@@ -82,7 +82,7 @@ public class TypeUtils {
     }
 
     /**
-     * 是否为 {@link boolean} 或 {@link Boolean}
+     * 是否为 {@link Boolean}
      *
      * @param o 被判断的值
      * @return 判断结果
