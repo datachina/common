@@ -39,6 +39,8 @@ public class ScopeDoesNotAllowedException extends BaseException {
 
     /**
      * scope 构造
+     *
+     * @param scope scope
      */
     public ScopeDoesNotAllowedException(List<String> scope) {
         this.scope = scope;

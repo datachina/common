@@ -7,10 +7,18 @@ package com.data.common.lang.error;
  */
 @SuppressWarnings("unused")
 public class WorkerIdObtainError extends Error {
+    /**
+     * 无参构造
+     */
     public WorkerIdObtainError() {
         super();
     }
 
+    /**
+     * 错误消息构造
+     *
+     * @param message 错误消息
+     */
     public WorkerIdObtainError(String message) {
         super(message);
     }
